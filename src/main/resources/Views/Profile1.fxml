@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1043.0" prefWidth="1372.0" stylesheets="@../Styles/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestion_des_taxis.gestion_des_taxis.Controllers.ProfileController">
+    <children>
+        <ImageView fitHeight="1050.0" fitWidth="1372.0" layoutX="14.0" layoutY="-1.0" pickOnBounds="true" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+            <image>
+                <Image url="@../Images/lexi-anderson-G8wPrJyNqWQ-unsplash.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane layoutX="230.0" layoutY="75.0" prefHeight="696.0" prefWidth="798.0" styleClass="box">
+            <children>
+                <Label layoutX="311.0" layoutY="48.0" text="Profile" textFill="#ffde00">
+                    <font>
+                        <Font name="Century Gothic" size="48.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nomlVal" layoutX="45.0" layoutY="171.0" prefHeight="45.0" prefWidth="308.0" promptText="Nom d'utilisateur " styleClass="textFields">
+                    <font>
+                        <Font name="Century Gothic" size="20.0" />
+                    </font>
+                </TextField>
+                <PasswordField fx:id="passwordVal" layoutX="399.0" layoutY="171.0" prefHeight="45.0" prefWidth="308.0" promptText="Mot De Passe" styleClass="textFields">
+                    <font>
+                        <Font name="Century Gothic" size="20.0" />
+                    </font>
+                </PasswordField>
+                <MFXButton layoutX="203.0" layoutY="518.0" minHeight="37.0" minWidth="131.0" onMouseClicked="#modifier" prefHeight="42.0" prefWidth="373.0" text="Modifier">
+                    <font>
+                        <Font name="Century Gothic" size="19.0" />
+                    </font></MFXButton>
+                <Label fx:id="errorMessage" alignment="CENTER" layoutX="7.0" layoutY="539.0" prefHeight="22.0" prefWidth="388.0" text="Label" textAlignment="CENTER" textFill="RED" AnchorPane.bottomAnchor="-56.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="539.0">
+                    <font>
+                        <Font name="Century Gothic" size="17.0" />
+                    </font>
+                </Label>
+            <TextField fx:id="prelVal" layoutX="45.0" layoutY="250.0" prefHeight="45.0" prefWidth="308.0" promptText="Prenom d'utilisateur " styleClass="textFields">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="emailVal" layoutX="399.0" layoutY="249.0" prefHeight="45.0" prefWidth="308.0" promptText=" Email" styleClass="textFields">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="AdresseVal" layoutX="45.0" layoutY="413.0" prefHeight="45.0" prefWidth="308.0" promptText="Adresse" styleClass="textFields">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="teleVal" layoutX="399.0" layoutY="334.0" prefHeight="45.0" prefWidth="308.0" promptText="Talephone" styleClass="textFields">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="cneVal" layoutX="45.0" layoutY="334.0" prefHeight="45.0" prefWidth="308.0" promptText="CNE" styleClass="textFields">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="userVal" layoutX="399.0" layoutY="412.0" prefHeight="45.0" prefWidth="308.0" promptText="userName" styleClass="textFields">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </TextField>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

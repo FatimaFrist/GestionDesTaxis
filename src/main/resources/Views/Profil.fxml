@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="868.0" prefWidth="1223.0" style="-fx-background-color: #02030A;" stylesheets="@../Styles/addStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestion_des_taxis.gestion_des_taxis.Controllers.ProfileController">
+   <children>
+      <JFXDialog fx:id="dialog" stylesheets="@../Styles/applicationShapeStyle.css">
+         <JFXDialogLayout>
+            <body>
+               <Label fx:id="dialogLabel" />
+            </body>
+            <actions>
+               <MFXButton fx:id="yesButton">Yes</MFXButton>
+               <MFXButton fx:id="noButton">No</MFXButton>
+            </actions>
+         </JFXDialogLayout>
+      </JFXDialog>
+      <AnchorPane fx:id="anchorPane">
+         <children>
+            <TextField fx:id="nomlVal" alignment="CENTER" layoutX="168.0" layoutY="165.0" prefHeight="63.0" prefWidth="360.0" promptText="Nom (*)" styleClass="textFields">
+               <font>
+                  <Font name="Century Gothic" size="25.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="prelVal" alignment="CENTER" layoutX="678.0" layoutY="165.0" prefHeight="63.0" prefWidth="360.0" promptText="Prénom (*)" styleClass="textFields">
+               <font>
+                  <Font name="Century Gothic" size="25.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="cneVal" alignment="CENTER" layoutX="168.0" layoutY="274.0" prefHeight="63.0" prefWidth="360.0" promptText="CIN (*)" styleClass="textFields">
+               <font>
+                  <Font name="Century Gothic" size="25.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="userVal" alignment="CENTER" layoutX="678.0" layoutY="274.0" prefHeight="63.0" prefWidth="360.0" promptText="Username (*)" styleClass="textFields">
+               <font>
+                  <Font name="Century Gothic" size="25.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="emailVal" alignment="CENTER" layoutX="168.0" layoutY="383.0" prefHeight="63.0" prefWidth="360.0" promptText="Email (*)" styleClass="textFields">
+               <font>
+                  <Font name="Century Gothic" size="25.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="teleVal" alignment="CENTER" layoutX="678.0" layoutY="383.0" prefHeight="63.0" prefWidth="360.0" promptText="Téléphone (*)" styleClass="textFields">
+               <font>
+                  <Font name="Century Gothic" size="25.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="AdresseVal" alignment="CENTER" layoutX="168.0" layoutY="492.0" prefHeight="63.0" prefWidth="872.0" promptText="Adresse" styleClass="textFields">
+               <font>
+                  <Font name="Century Gothic" size="25.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordVal" alignment="CENTER" layoutX="168.0" layoutY="601.0" prefHeight="63.0" prefWidth="360.0" promptText="Ancien Mot de passe" styleClass="textFields">
+               <font>
+                  <Font name="Century Gothic" size="25.0" />
+               </font>
+            </PasswordField>
+            <MFXButton layoutX="518.0" layoutY="719.0" onMouseClicked="#modifier" prefHeight="55.0" prefWidth="188.0" text="Modifier">
+               <font>
+                  <Font name="Century Gothic" size="25.0" />
+               </font>
+            </MFXButton>
+            <Label fx:id="pageTitle" alignment="CENTER" layoutY="45.0" prefHeight="52.0" prefWidth="625.0" text="Profile" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Century Gothic Bold" size="48.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordVal2" alignment="CENTER" layoutX="678.0" layoutY="601.0" prefHeight="63.0" prefWidth="360.0" promptText="Nouveau Mot de passe" styleClass="textFields">
+               <font>
+                  <Font name="Century Gothic" size="25.0" />
+               </font>
+            </PasswordField>
+            <Label fx:id="errorMessage" alignment="CENTER" contentDisplay="CENTER" layoutY="800.0" prefHeight="24.0" prefWidth="620.0" text="Label" textAlignment="CENTER" textFill="RED" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Century Gothic" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

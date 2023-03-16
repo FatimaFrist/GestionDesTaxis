@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="854.0" prefWidth="1600.0" style="-fx-background-color: #02030A;" styleClass="grad" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestion_des_taxis.gestion_des_taxis.Controllers.DashboardController">
+   <children>
+      <VBox layoutX="502.0" layoutY="292.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <VBox prefHeight="315.0" prefWidth="1540.0" styleClass="shadow" stylesheets="@../DashboardStyle.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="INFORMATIONS GENERALE" textFill="#ffde00">
+                     <font>
+                        <Font name="Berlin Sans FB" size="37.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="300.0" prefWidth="1540.0" spacing="8.0" stylesheets="@../DashboardStyle.css">
+                     <children>
+                        <VBox alignment="CENTER" prefWidth="380.0" styleClass="container">
+                           <children>
+                              <ImageView fitHeight="90.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/icons8-embouteillage-100.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="nbrVoiture" text="0" textFill="#00b4d8">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="55.0" />
+                                 </font>
+                              </Label>
+                              <Label text="VOITURE" textFill="WHITE">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefWidth="380.0" styleClass="container">
+                           <children>
+                              <ImageView fitHeight="90.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/gears_240px.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="nbrReparation" text="0" textFill="#00b4d8">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="55.0" />
+                                 </font>
+                              </Label>
+                              <Label text="RÉPARATION" textFill="WHITE">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefWidth="380.0" styleClass="container">
+                           <children>
+                              <ImageView fitHeight="90.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/driver_96px.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="nbrChauffeur" text="0" textFill="#00b4d8">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="55.0" />
+                                 </font>
+                              </Label>
+                              <Label text="CHAUFFEUR" textFill="WHITE">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefWidth="380.0" styleClass="container">
+                           <children>
+                              <ImageView fitHeight="90.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/paste_96px.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="nbrDemande" text="0" textFill="#00b4d8">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="55.0" />
+                                 </font>
+                              </Label>
+                              <Label text="DEMANDE" textFill="WHITE">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox maxHeight="-Infinity" prefHeight="697.0" prefWidth="1540.0" stylesheets="@../DashboardStyle.css">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="354.0" prefWidth="780.0" stylesheets="@../DashboardStyle.css">
+                     <children>
+                        <Label text="NOMBRE DE DEMANDES " textFill="#ffde00">
+                           <font>
+                              <Font name="Berlin Sans FB" size="37.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <LineChart fx:id="lineChart" stylesheets="@../DashboardStyle.css">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="container" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" prefHeight="354.0" prefWidth="780.0" stylesheets="@../DashboardStyle.css">
+                     <children>
+                        <Label text="STATUTS DES DEMANDES" textFill="#ffde00">
+                           <font>
+                              <Font name="Berlin Sans FB" size="37.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <PieChart fx:id="pieChart" legendSide="TOP" titleSide="BOTTOM">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </PieChart>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="container" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox prefHeight="206.0" prefWidth="1540.0" styleClass="shadow" stylesheets="@../DashboardStyle.css">
+               <children>
+                  <Label text="AUTRE INFORMATIONS" textFill="#ffde00">
+                     <font>
+                        <Font name="Berlin Sans FB" size="37.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="287.0" prefWidth="1540.0" spacing="50.0" stylesheets="@../DashboardStyle.css">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefWidth="380.0" styleClass="container">
+                           <children>
+                              <ImageView fitHeight="90.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/people_100px.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="nbrClient" text="0" textFill="#00b4d8">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="55.0" />
+                                 </font>
+                              </Label>
+                              <Label text="CLIENT" textFill="WHITE">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="3.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="172.0" prefWidth="553.0" spacing="1.0" styleClass="container">
+                           <children>
+                              <Label text="DERNIÈRES RÉPARATIONS" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="vidange1" text="Vidange" textFill="#00b4d8">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="vidange2" text="Vidange" textFill="#00b4d8">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="vidange3" text="Vidange" textFill="#00b4d8">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="vidange4" text="Vidange" textFill="#00b4d8">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="172.0" prefWidth="491.0" spacing="1.0" styleClass="container">
+                           <children>
+                              <Label text="DERNIÈRES DEMANDES" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="demand1" text="Demande" textFill="#00b4d8">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="demand2" text="Demande" textFill="#00b4d8">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="demand3" text="Demande" textFill="#00b4d8">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="demand4" text="Demande" textFill="#00b4d8">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../DashboardStyle.css" />
+      <URL value="@../Styles/applicationShapeStyle.css" />
+   </stylesheets>
+</AnchorPane>

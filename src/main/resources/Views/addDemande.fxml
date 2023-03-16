@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane prefHeight="723.0" prefWidth="650.0" style="-fx-background-color: #0A0E3F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestion_des_taxis.gestion_des_taxis.Controllers.AddDemandeController">
+    <content>
+        <StackPane fx:id="stackPane" prefHeight="640.0" prefWidth="650.0">
+            <children>
+                <AnchorPane fx:id="anchorPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #05071F;" stylesheets="@../Styles/addStyle.css">
+                    <children>
+                        <Label fx:id="pageTitle" alignment="CENTER" layoutX="106.0" layoutY="14.0" text="Ajouter un Demande" textAlignment="CENTER" textFill="#ffde00" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <font>
+                                <Font name="Century Gothic Bold" size="41.0" />
+                            </font>
+                        </Label>
+                        <MFXButton fx:id="ajouterBtn" layoutX="56.0" layoutY="606.0" onMouseClicked="#ajouter" prefHeight="55.0" prefWidth="188.0" text="Ajouter">
+                            <font>
+                                <Font name="Century Gothic" size="25.0" />
+                            </font>
+                        </MFXButton>
+                        <MFXButton fx:id="modifierBtn" layoutX="56.0" layoutY="606.0" onMouseClicked="#modifier" prefHeight="55.0" prefWidth="188.0" text="Modifier">
+                            <font>
+                                <Font name="Century Gothic" size="25.0" />
+                            </font>
+                        </MFXButton>
+                        <MFXButton layoutX="382.0" layoutY="606.0" onMouseClicked="#anuller" prefHeight="55.0" prefWidth="188.0" text="Fermer">
+                            <font>
+                                <Font name="Century Gothic" size="25.0" />
+                            </font>
+                        </MFXButton>
+                        <Label fx:id="errorMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="571.0" prefHeight="24.0" prefWidth="620.0" text="Label" textAlignment="CENTER" textFill="RED">
+                            <font>
+                                <Font name="Century Gothic" size="19.0" />
+                            </font>
+                        </Label>
+                  <ComboBox fx:id="cbvoiture" layoutX="49.0" layoutY="123.0" onAction="#fillVoitureMarque" prefHeight="63.0" prefWidth="217.0" promptText="Voiture (*)" styleClass="comboBox" />
+                  <ComboBox fx:id="cbclient" layoutX="49.0" layoutY="232.0" prefHeight="63.0" prefWidth="527.0" promptText="Client (*)" styleClass="comboBox" />
+                  <ComboBox fx:id="cbchauffeur" layoutX="50.0" layoutY="341.0" prefHeight="63.0" prefWidth="527.0" promptText="Chauffeur (*)" styleClass="comboBox" />
+                  <ComboBox fx:id="cbstatus" layoutX="50.0" layoutY="450.0" prefHeight="63.0" prefWidth="527.0" promptText="Status (*)" styleClass="comboBox" />
+                  <TextField fx:id="voitureVal" alignment="CENTER" editable="false" layoutX="345.0" layoutY="123.0" prefHeight="63.0" prefWidth="231.0" promptText="Voiture" styleClass="textFields">
+                     <font>
+                        <Font name="Century Gothic" size="25.0" />
+                     </font>
+                  </TextField>
+                    </children>
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </content>
+</DialogPane>
